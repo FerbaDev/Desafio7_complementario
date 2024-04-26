@@ -9,6 +9,7 @@ import exphbs from "express-handlebars";
 import sessionsRouter from "./routes/session.router.js"
 import passport from "passport";
 import initializePassport from "./config/passport.config.js";
+import productsRouter from "./routes/products.router.js";
 
 //Middleware
 app.use(express.json());
@@ -35,6 +36,7 @@ initializePassport();
 app.use(passport.initialize())
 app.use(passport.session()) 
 //rutas
+app.use("/api/products", productsRouter);
 app.use("/api/sessions", sessionsRouter);
 app.use("/", viewsRouter);
 //listen
