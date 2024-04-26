@@ -26,8 +26,8 @@ router.get("/profile", (req, res) => {
     res.render("profile", {user: req.session.user})
 })
 
-router.get("/productos", (req, res) => {
-    res.render("productos", {title: "Productos", user: req.session.user})
+router.get("/products", (req, res) => {
+    res.render("products", {title: "Productos", user: req.session.user})
 })
 
 
