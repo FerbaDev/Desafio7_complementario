@@ -16,7 +16,7 @@ router.get("/register", (req, res) => {
 
 router.get("/login", (req, res) => {
     if (req.session.login) { //si ya logueado lo manda a productos
-        return res.redirect("/productos")
+        return res.redirect("/products")
     }
     res.render("login", {title: "Login"})
 })
