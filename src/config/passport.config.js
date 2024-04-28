@@ -13,13 +13,14 @@ const initializePassport = () => {
 
     }, async (req, username, password, done) => {
         const {first_name, last_name, email, age} = req.body;
+        let cart = "hola";
         try {
             //verificamos si el mail existe
             let user = await UserModel.findOne({email});
             if (user) return done(null, false)
             
             let newUser= { 
-                first_name, last_name, email, age, password: createHash(password)
+                first_name, last_name, email, age, password: createHash(password), cart
             }
             let result = await UserModel.create(newUser);
             return done(null, result)

@@ -1,6 +1,4 @@
 import express from "express";
-import UserModel from "../models/user.model.js";
-import { createHash, isValidPassword } from "../utils/hashbcrypt.js";
 const router = express.Router();
 import passport from "passport";
 
