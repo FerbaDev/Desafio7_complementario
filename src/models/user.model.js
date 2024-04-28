@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         default: "user"
     },
     cart: {
-        type: String
+        type: Object
     }
 })
 

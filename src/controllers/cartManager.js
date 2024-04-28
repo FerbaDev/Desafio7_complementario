@@ -2,8 +2,6 @@ import CartModel from "../models/cart.model.js";
 
 class CartManager {
     
-
-
     async createCart() {
        try {
             const newCart = new CartModel({products: []});
